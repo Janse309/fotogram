@@ -1,21 +1,44 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-header{
+header {
     height: 81px;
     background-color: #09212A;
     display: flex;
     align-items: center;
 }
 
-main{
-    height: 100vh;
+main {
     background-color: #06171E;
+    flex: 1;
+    height: 100vh;
+    gap: 16px;
 }
 
-footer{
+.page-content {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.page-content-btn {
+    all: unset;
+}
+
+.button-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+footer {
     height: 128px;
+    width: 100%;
     background-color: #09212A;
 }
