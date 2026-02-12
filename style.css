@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 81px;
+    background-color: #09212A;
+    display: flex;
+    align-items: center;
+}
+
+main{
+    height: 100vh;
+    background-color: #06171E;
+}
+
+footer{
+    height: 128px;
+    background-color: #09212A;
+}
