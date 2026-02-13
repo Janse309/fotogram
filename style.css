@@ -10,18 +10,12 @@ header {
     align-items: center;
 }
 
-h1{
+h1 {
     color: white;
 }
 
-main {
-    background-color: #06171E;
-    flex: 1;
-    height: 100vh;
-}
-
-.wrapper{
-    width: 100%;
+.wrapper {
+    max-width: 1440px;
 }
 
 .page-content {
@@ -29,6 +23,9 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #06171E;
+    flex: 1;
+    height: 100vh;
 }
 
 
@@ -37,13 +34,13 @@ main {
     border-radius: 8px;
     aspect-ratio: 1 / 1;
     cursor: pointer;
-    
 }
 
-.content-btn img{
+.content-btn img {
     height: 150px;
     width: 150px;
     border-radius: 8px;
+    object-fit: cover;
 }
 
 footer {
