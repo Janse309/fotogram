@@ -10,31 +10,40 @@ header {
     align-items: center;
 }
 
+h1{
+    color: white;
+}
+
 main {
     background-color: #06171E;
     flex: 1;
     height: 100vh;
-    gap: 16px;
+}
+
+.wrapper{
+    width: 100%;
 }
 
 .page-content {
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 
-.page-content-btn {
+.content-btn {
     all: unset;
-}
-
-.button-img {
-    width: 150px;
-    height: 150px;
     border-radius: 8px;
     aspect-ratio: 1 / 1;
-    object-fit: cover;
+    cursor: pointer;
+    
+}
+
+.content-btn img{
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
 }
 
 footer {
