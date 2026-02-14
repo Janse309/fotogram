@@ -34,15 +34,14 @@ h1 {
 
 main {
     background-color: #06171E;
+    flex: 1;
 }
 
 .album {
     display: grid;
     grid-template-columns: repeat(7, 1fr); 
-    gap: 20px;
-    /* Das Album selbst darf wachsen, aber nicht über 1200px */
-    width: 100%;
-    max-width: 1200px; 
+    gap: 40px 15px;
+    justify-content: center;
 }
 
 .page-content {
@@ -57,7 +56,7 @@ main {
 
 .content-btn {
     width: 100%;             /* Button füllt genau eine Grid-Zelle */
-    aspect-ratio: 1 / 1;
+    
     border: none;
     padding: 0;
     border-radius: 16px;
@@ -73,10 +72,12 @@ main {
 
 .content-btn img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;                      /* Zuschneiden ohne Verzerren */
-    display: block;   
-}
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+} 
 
 footer {
     height: 128px;
