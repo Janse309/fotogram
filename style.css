@@ -56,7 +56,6 @@ main {
 
 .content-btn {
     width: 100%;             /* Button füllt genau eine Grid-Zelle */
-    
     border: none;
     padding: 0;
     border-radius: 16px;
@@ -82,4 +81,45 @@ main {
 footer {
     height: 128px;
     background-color: #09212A;
+}
+
+.popUpField{
+    background-color: #06171E;
+    color: white;
+    margin: auto;
+    border: none;
+    padding: 0;
+    width: 80%;           /* Oder ein fester Wert wie 600px */
+    max-width: 800px;     /* Damit er auf großen Bildschirmen nicht zu riesig wird */
+    border-radius: 16px
+}
+
+.popUpField header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 20px 24px;             
+    width: 100%;    
+    box-sizing: border-box; /* Wichtig, damit Padding die Breite nicht sprengt */
+}
+
+.close-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex; 
+    align-items: center;
+}
+
+.popUpField footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.popUpField footer{
+    display: flex;
+    justify-content: center;
 }

@@ -1,7 +1,15 @@
 
 
 
+function openDialog() {
+    const dialogRef = document.getElementById('myDialog');
+    dialogRef.showModal();
+}
 
+function closeDialog() {
+    const dialogRef = document.getElementById('myDialog');
+    dialogRef.close();
+}
 
 
 
@@ -18,4 +26,4 @@ let images = [
     "puppys.jpg",
     "rhino.jpg",
     "wolves.jpg"
-]
+];

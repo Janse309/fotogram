@@ -7,6 +7,7 @@
     <title>Fotogram</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/fav-icon.png">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -23,24 +24,41 @@
 
         <section class="wrapper page-content">
 
-            <h1>your personal photo album</h1>
+            <h1>Your personal photo album</h1>
 
-            <div class="album">
-
-
-                <button class="content-btn"><img src="./img/wolves.jpg" alt="wolf image"></button>
-                <button class="content-btn"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
-                <button class="content-btn"><img src="./img/ducks.jpg" alt="ducks image"></button>
-                <button class="content-btn"><img src="./img/habichtskauz.jpg" alt="habichtskauz image"></button>
-                <button class="content-btn"><img src="./img/puppys.jpg" alt="dog image"></button>
-                <button class="content-btn"><img src="./img/hase.jpg" alt="rabbit image"></button>
-                <button class="content-btn"><img src="./img/merkats.jpg" alt="Meerkats Image"></button>
-                <button class="content-btn"><img src="./img/mole.jpg" alt="mole image"></button>
-                <button class="content-btn"><img src="./img/rhino.jpg" alt="rhino"></button>
-                <button class="content-btn"><img src="./img/hawk.jpg" alt="hawk image"></button>
-                <button class="content-btn"><img src="./img/grizzli.jpg" alt="grizzlies image"></button>
-                <button class="content-btn"><img src="./img/horses.jpg" alt="horses image"></button>
+            <div id="photo" class="album">
+                <button onclick="openDialog()" class="content-btn"><img src="./img/wolves.jpg" alt="wolf image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/ducks.jpg" alt="ducks image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/habichtskauz.jpg" alt="habichtskauz image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/puppys.jpg" alt="dog image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/hase.jpg" alt="rabbit image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/merkats.jpg" alt="meerkats Image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/mole.jpg" alt="mole image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/rhino.jpg" alt="rhino"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/hawk.jpg" alt="hawk image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/grizzli.jpg" alt="grizzlies image"></button>
+                <button onclick="openDialog()" class="content-btn"><img src="./img/horses.jpg" alt="horses image"></button>
             </div>
+
+            <dialog class="popUpField" id="myDialog">
+                <header>
+                    <h2>Überschrift des Bildes</h2>
+                    <button class="close-icon" onclick="closeDialog()"><img src="./img/close.svg" alt="close"></button>
+                </header>
+
+
+                <section>
+                    <p>ich bin das Bild</p>
+                </section>
+
+                <footer>
+                    <button onclick="skipDialog()"><img src="./img/scip_button.svg" alt="skip"></button>
+                </footer>
+            </dialog>
+
+
+
         </section>
     </main>
 
