@@ -2,81 +2,83 @@
   font-family: 'Figtree';
   src: url('./assets/figtree-normal.woff2') format('woff2');
 }
+
 * {
     margin: 0;
+    box-sizing: border-box; /* Wichtig für korrektes Padding/Width Handling */
     font-family: 'Figtree', sans-serif;
 }
 
 h1 {
     color: white;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    font-size: 56px;
-    padding-bottom: 80px;
+    font-size: clamp(32px, 5vw, 56px);
+    padding-bottom: 60px; /* Etwas reduziert für bessere Optik */
+    text-align: center;
 }
 
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .page-header {
-    background-color: #09212A;
-    align-items: center;
-    display: flex;
-    height: 80px;
-    
+    background-color: #09212A;    
 }
 
 .header-content {
-    width: 100%;
-    padding: 0 20px;
     height: 80px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 main {
     background-color: #06171E;
-    padding-top: 80px;
 }
 
-.picture-container{
-    width: 1200px;
-
+.album {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    gap: 20px;
+    /* Das Album selbst darf wachsen, aber nicht über 1200px */
+    width: 100%;
+    max-width: 1200px; 
 }
 
 .page-content {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    flex: 1;
-    height: 100vh;
-    padding: 0 20px;
-}
-
-.test-div{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;      /* Zentriert H1 und Album horizontal */
+    justify-content: center;   /* Zentriert den gesamten Block vertikal */
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #06171E;
 }
 
 .content-btn {
-    all: unset;
-    border-radius: 8px;
+    width: 100%;             /* Button füllt genau eine Grid-Zelle */
     aspect-ratio: 1 / 1;
+    border: none;
+    padding: 0;
+    border-radius: 16px;
+    overflow: hidden;
     cursor: pointer;
+    background: none;        /* Entfernt Standard-Button-Grau */
+}
+
+.content-btn:nth-child(8) {
+    /* Das 8. Bild (erstes der 2. Reihe) startet in Spalte 2 statt 1 */
+    grid-column: 2;
 }
 
 .content-btn img {
-    height: 150px;
-    width: 150px;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                      /* Zuschneiden ohne Verzerren */
+    display: block;   
 }
 
 footer {
     height: 128px;
-    width: 100%;
     background-color: #09212A;
 }
