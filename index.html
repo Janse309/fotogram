@@ -26,7 +26,7 @@
 
             <h1>Your personal photo album</h1>
 
-            <div id="photo" class="album">
+            <div id="content" class="album">
                 <button onclick="openDialog()" class="content-btn"><img src="./img/wolves.jpg" alt="wolf image"></button>
                 <button onclick="openDialog()" class="content-btn"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
                 <button onclick="openDialog()" class="content-btn"><img src="./img/ducks.jpg" alt="ducks image"></button>
@@ -49,11 +49,12 @@
 
 
                 <section>
-                    <p>ich bin das Bild</p>
+                    <img src="" alt="" class="dialog-img" id="dialog-main-content">
                 </section>
 
                 <footer>
-                    <button onclick="skipDialog()"><img src="./img/scip_button.svg" alt="skip"></button>
+                    <div>
+                    <button onclick="nextPic()"><img src="./img/scip_button.svg" alt="skip"></button>
                 </footer>
             </dialog>
 
@@ -64,8 +65,9 @@
 
 
     <footer>
-        <section class="wrapper">
-
+        
+        <section class="wrapper footer-section">
+            <img src="./img/Frame 6.png" alt="">
         </section>
     </footer>
 

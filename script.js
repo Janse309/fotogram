@@ -11,8 +11,6 @@ function closeDialog() {
     dialogRef.close();
 }
 
-
-
 let images = [
     "ducks.jpg",
     "grizzli.jpg",
@@ -27,3 +25,22 @@ let images = [
     "rhino.jpg",
     "wolves.jpg"
 ];
+
+for (let index = 0; index < images.length; index++) {
+    const element = array[index];
+    
+}
+
+let currentIndex = 0;
+
+function nextPic() {
+    let next = currentIndex + 1;
+    if (next >= images.length) next = 0 ;
+    showPic(next);
+}
+
+function prevPic() {
+    let prev = currentIndex - 1;
+    if (prev < 0) prev = images.length - 1 ;
+    showPic(prev);
+}

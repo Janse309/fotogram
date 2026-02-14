@@ -81,8 +81,12 @@ main {
 footer {
     height: 128px;
     background-color: #09212A;
+    display: flex;
+    align-items: center;
 }
 
+
+/* Dialog-Section */
 .popUpField{
     background-color: #06171E;
     color: white;
