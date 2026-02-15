@@ -1,18 +1,20 @@
 @font-face {
-  font-family: 'Figtree';
-  src: url('./assets/figtree-normal.woff2') format('woff2');
+    font-family: 'Figtree';
+    src: url('./assets/figtree-normal.woff2') format('woff2');
 }
 
 * {
     margin: 0;
-    box-sizing: border-box; /* Wichtig für korrektes Padding/Width Handling */
+    box-sizing: border-box;
+    /* Wichtig für korrektes Padding/Width Handling */
     font-family: 'Figtree', sans-serif;
 }
 
 h1 {
     color: white;
     font-size: clamp(32px, 5vw, 56px);
-    padding-bottom: 60px; /* Etwas reduziert für bessere Optik */
+    padding-bottom: 60px;
+    /* Etwas reduziert für bessere Optik */
     text-align: center;
 }
 
@@ -22,7 +24,7 @@ h1 {
 }
 
 .page-header {
-    background-color: #09212A;    
+    background-color: #09212A;
 }
 
 .header-content {
@@ -39,7 +41,7 @@ main {
 
 .album {
     display: grid;
-    grid-template-columns: repeat(7, 1fr); 
+    grid-template-columns: repeat(7, 1fr);
     gap: 40px 15px;
     justify-content: center;
 }
@@ -47,21 +49,25 @@ main {
 .page-content {
     display: flex;
     flex-direction: column;
-    align-items: center;      /* Zentriert H1 und Album horizontal */
-    justify-content: center;   /* Zentriert den gesamten Block vertikal */
+    align-items: center;
+    /* Zentriert H1 und Album horizontal */
+    justify-content: center;
+    /* Zentriert den gesamten Block vertikal */
     min-height: 100vh;
     padding: 40px 20px;
     background-color: #06171E;
 }
 
 .content-btn {
-    width: 100%;             /* Button füllt genau eine Grid-Zelle */
+    width: 100%;
+    /* Button füllt genau eine Grid-Zelle */
     border: none;
     padding: 0;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    background: none;        /* Entfernt Standard-Button-Grau */
+    background: none;
+    /* Entfernt Standard-Button-Grau */
 }
 
 .content-btn:nth-child(8) {
@@ -76,7 +82,7 @@ main {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     transition: transform 0.3s ease;
-} 
+}
 
 footer {
     height: 128px;
@@ -87,24 +93,29 @@ footer {
 
 
 /* Dialog-Section */
-.popUpField{
+.popUpField {
     background-color: #06171E;
     color: white;
     margin: auto;
     border: none;
     padding: 0;
-    width: 80%;           /* Oder ein fester Wert wie 600px */
-    max-width: 800px;     /* Damit er auf großen Bildschirmen nicht zu riesig wird */
-    border-radius: 16px
+    width: 560px;
+    height: 374px;
+    /* Oder ein fester Wert wie 600px */
+    max-width: 800px;
+    /* Damit er auf großen Bildschirmen nicht zu riesig wird */
+    border-radius: 16px;
+    
 }
 
 .popUpField header {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;            
-    padding: 20px 24px;             
-    width: 100%;    
-    box-sizing: border-box; /* Wichtig, damit Padding die Breite nicht sprengt */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Wichtig, damit Padding die Breite nicht sprengt */
 }
 
 .close-icon {
@@ -112,18 +123,24 @@ footer {
     border: none;
     padding: 0;
     cursor: pointer;
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
-.popUpField footer button {
+.navigation-container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #06171E;
+}
+
+.navigation-container span{
+    padding: 0 48px;
+}
+
+.navigation-container button {
     background: none;
     border: none;
     cursor: pointer;
     padding: 10px;
-}
-
-.popUpField footer{
-    display: flex;
-    justify-content: center;
 }

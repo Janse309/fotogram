@@ -41,9 +41,10 @@
                 <button onclick="openDialog()" class="content-btn"><img src="./img/horses.jpg" alt="horses image"></button>
             </div>
 
-            <dialog class="popUpField" id="myDialog">
+            <dialog onclick="updateDialogContent()" class="popUpField" id="myDialog">
+                <div class="dialogContent">
                 <header>
-                    <h2>Überschrift des Bildes</h2>
+                    <h2></h2>
                     <button class="close-icon" onclick="closeDialog()"><img src="./img/close.svg" alt="close"></button>
                 </header>
 
@@ -52,10 +53,12 @@
                     <img src="" alt="" class="dialog-img" id="dialog-main-content">
                 </section>
 
-                <footer>
-                    <div>
-                    <button onclick="nextPic()"><img src="./img/scip_button.svg" alt="skip"></button>
+                <footer class="navigation-container">
+                    <button onclick="prevPic()"><img src="./img/prev.svg" alt="back"></button>
+                    <span id="img-counter">1 / 12</span>
+                    <button onclick="nextPic()"><img src="./img/next.svg" alt="skip"></button>
                 </footer>
+                </div>
             </dialog>
 
 

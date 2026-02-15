@@ -11,36 +11,51 @@ function closeDialog() {
     dialogRef.close();
 }
 
+let imageTitles = [
+    "two wolves",
+    "baby sheep",
+    "baby duck",
+    "owl",
+    "two dogs",
+    "rabbit",
+    "erdmännchen",
+    "mowl",
+    "rhino",
+    "hawk",
+    "two bears",
+    "two horses"
+]
+
 let images = [
-    "ducks.jpg",
-    "grizzli.jpg",
-    "habichtskauz.jpg",
-    "hase.jpg",
-    "hawk.jpg",
-    "horses.jpg",
-    "lamm.jpg",
-    "merkats.jpg",
-    "mole.jpg",
-    "puppys.jpg",
-    "rhino.jpg",
-    "wolves.jpg"
+    "./img/wolves.jpg",
+    "./img/lamm.jpg",
+    "./img/ducks.jpg",
+    "./img/habichtskauz.jpg",
+    "./img/puppys.jpg",
+    "./img/hase.jpg",
+    "./img/merkats.jpg",
+    "./img/mole.jpg",
+    "./img/rhino.jpg",
+    "./img/hawk.jpg",
+    "./img/grizzli.jpg",
+    "./img/horses.jpg"
 ];
 
-for (let index = 0; index < images.length; index++) {
-    const element = array[index];
-    
-}
 
 let currentIndex = 0;
 
 function nextPic() {
-    let next = currentIndex + 1;
-    if (next >= images.length) next = 0 ;
-    showPic(next);
+    // Wenn wir am Ende sind, fangen wir wieder bei 0 an
+    currentIndex = (currentIndex + 1) % images.length;
+    updateDialogContent();
 }
 
 function prevPic() {
-    let prev = currentIndex - 1;
-    if (prev < 0) prev = images.length - 1 ;
-    showPic(prev);
+    // Geht einen Schritt zurück
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateDialogContent();
+}
+
+function updateDialogContent() {
+    
 }
