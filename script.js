@@ -27,18 +27,18 @@ let images = [
 ];
 
 let imageTitles = [
-    "two wolves",
-    "baby sheep",
-    "baby duck",
-    "owl",
-    "two dogs",
-    "rabbit",
-    "erdmännchen",
-    "mowl",
-    "rhino",
-    "hawk",
-    "two bears",
-    "two horses"
+    "Two wolves",
+    "Baby sheep",
+    "Baby duck",
+    "Owl",
+    "Two dogs",
+    "Rabbit",
+    "Merkats",
+    "Mowl",
+    "Rhino",
+    "Hawk",
+    "Two bears",
+    "Two horses"
 ];
 
 let currentIndex = 0;
