@@ -40,11 +40,17 @@ body {
     flex-direction: column;
 }
 
+button{
+    padding-block: 0;
+    padding-inline: 0;   
+}
+
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
     width: 100%;
-    padding: 0 20px; /* Sicherheitsabstand für kleine Screens */
+    padding: 0 20px;
+    /* Sicherheitsabstand für kleine Screens */
 }
 
 .wrapper-wide {
@@ -73,8 +79,12 @@ body {
 .album {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 40px 15px;
+    gap: 40px 16px;
     justify-content: center;
+}
+
+.content-btn:nth-child(8) {
+    grid-column: 2; /* Verschiebt das 8. Bild in die 2. Spalte */
 }
 
 .page-content {
@@ -99,10 +109,7 @@ body {
     /* Entfernt Standard-Button-Grau */
 }
 
-.content-btn:nth-child(8) {
-    /* Das 8. Bild (erstes der 2. Reihe) startet in Spalte 2 statt 1 */
-    grid-column: 2;
-}
+
 
 .content-btn img {
     width: 100%;
@@ -123,7 +130,7 @@ body {
     display: flex;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,4 +216,32 @@ body {
     border: none;
     cursor: pointer;
     padding-top: 8px;
+}
+
+@media (max-width: 1400px) {
+    .album {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+       
+        justify-content: center;
+    }
+
+    .album img {
+        max-width: 200px;
+        max-height: 200px;
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+}
+
+@media (max-width: 1200px){
+    .album {
+        grid-template-columns: repeat(4, 1fr);
+         gap: 0;
+    }
+    
+    .content-btn:nth-child(8) {
+        grid-column: auto; /* Hebt die Verschiebung von oben auf! */
+    }
 }
