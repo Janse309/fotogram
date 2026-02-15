@@ -11,21 +11,6 @@ function closeDialog() {
     dialogRef.close();
 }
 
-let imageTitles = [
-    "two wolves",
-    "baby sheep",
-    "baby duck",
-    "owl",
-    "two dogs",
-    "rabbit",
-    "erdmännchen",
-    "mowl",
-    "rhino",
-    "hawk",
-    "two bears",
-    "two horses"
-]
-
 let images = [
     "./img/wolves.jpg",
     "./img/lamm.jpg",
@@ -41,8 +26,29 @@ let images = [
     "./img/horses.jpg"
 ];
 
+let imageTitles = [
+    "two wolves",
+    "baby sheep",
+    "baby duck",
+    "owl",
+    "two dogs",
+    "rabbit",
+    "erdmännchen",
+    "mowl",
+    "rhino",
+    "hawk",
+    "two bears",
+    "two horses"
+];
 
 let currentIndex = 0;
+
+function openDialog(index) {
+    currentIndex = index; // Setze den Index auf das geklickte Bild
+    const dialog = document.getElementById('myDialog');
+    updateDialogContent(); // Funktion zum Befüllen des Inhalts
+    dialog.showModal();
+}
 
 function nextPic() {
     // Wenn wir am Ende sind, fangen wir wieder bei 0 an
@@ -57,5 +63,15 @@ function prevPic() {
 }
 
 function updateDialogContent() {
+    const imgElement = document.getElementById('dialog-main-content');
+    const counterElement = document.getElementById('img-counter'); // ID angepasst auf dein HTML
+    const headline = document.querySelector('.dialogContent h2'); // Findet dein h2 Element
     
+    imgElement.src = images[currentIndex];
+    headline.innerText = imageTitles[currentIndex]; // Setzt den Titel
+    counterElement.innerText = `${currentIndex + 1} / ${images.length}`; // Ändert den Text
+}
+
+function closeDialog() {
+    document.getElementById('myDialog').close();
 }

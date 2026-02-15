@@ -27,21 +27,21 @@
             <h1>Your personal photo album</h1>
 
             <div id="content" class="album">
-                <button onclick="openDialog()" class="content-btn"><img src="./img/wolves.jpg" alt="wolf image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/ducks.jpg" alt="ducks image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/habichtskauz.jpg" alt="habichtskauz image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/puppys.jpg" alt="dog image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/hase.jpg" alt="rabbit image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/merkats.jpg" alt="meerkats Image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/mole.jpg" alt="mole image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/rhino.jpg" alt="rhino"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/hawk.jpg" alt="hawk image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/grizzli.jpg" alt="grizzlies image"></button>
-                <button onclick="openDialog()" class="content-btn"><img src="./img/horses.jpg" alt="horses image"></button>
+                <button onclick="openDialog(0)" class="content-btn"><img src="./img/wolves.jpg" alt="wolf image"></button>
+                <button onclick="openDialog(1)" class="content-btn"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
+                <button onclick="openDialog(2)" class="content-btn"><img src="./img/ducks.jpg" alt="ducks image"></button>
+                <button onclick="openDialog(3)" class="content-btn"><img src="./img/habichtskauz.jpg" alt="habichtskauz image"></button>
+                <button onclick="openDialog(4)" class="content-btn"><img src="./img/puppys.jpg" alt="dog image"></button>
+                <button onclick="openDialog(5)" class="content-btn"><img src="./img/hase.jpg" alt="rabbit image"></button>
+                <button onclick="openDialog(6)" class="content-btn"><img src="./img/merkats.jpg" alt="meerkats Image"></button>
+                <button onclick="openDialog(7)" class="content-btn"><img src="./img/mole.jpg" alt="mole image"></button>
+                <button onclick="openDialog(8)" class="content-btn"><img src="./img/rhino.jpg" alt="rhino"></button>
+                <button onclick="openDialog(9)" class="content-btn"><img src="./img/hawk.jpg" alt="hawk image"></button>
+                <button onclick="openDialog(10)" class="content-btn"><img src="./img/grizzli.jpg" alt="grizzlies image"></button>
+                <button onclick="openDialog(11)" class="content-btn"><img src="./img/horses.jpg" alt="horses image"></button>
             </div>
 
-            <dialog onclick="updateDialogContent()" class="popUpField" id="myDialog">
+            <dialog class="popUpField" id="myDialog">
                 <div class="dialogContent">
                 <header>
                     <h2></h2>
@@ -49,8 +49,8 @@
                 </header>
 
 
-                <section>
-                    <img src="" alt="" class="dialog-img" id="dialog-main-content">
+                <section >
+                    <img class="dialog-picture" src="" alt="" class="dialog-img" id="dialog-main-content">
                 </section>
 
                 <footer class="navigation-container">
