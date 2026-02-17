@@ -1,77 +1,101 @@
 
-
-
-function openDialog() {
-    const dialogRef = document.getElementById('myDialog');
-    dialogRef.showModal();
-}
-
-function closeDialog() {
-    const dialogRef = document.getElementById('myDialog');
-    dialogRef.close();
-}
-
 let images = [
-    "./img/wolves.jpg",
-    "./img/lamm.jpg",
-    "./img/ducks.jpg",
-    "./img/habichtskauz.jpg",
-    "./img/puppys.jpg",
-    "./img/hase.jpg",
-    "./img/merkats.jpg",
-    "./img/mole.jpg",
-    "./img/rhino.jpg",
-    "./img/hawk.jpg",
-    "./img/grizzli.jpg",
-    "./img/horses.jpg"
+    { src: "./img/wolves.jpg", title: 'Two wolves' },
+    { src: "./img/lamm.jpg", title: "Baby sheep" },
+    { src: "./img/ducks.jpg", title: "Baby duck" },
+    { src: "./img/habichtskauz.jpg", title: "Owl" },
+    { src: "./img/puppys.jpg", title: "Two dogs" },
+    { src: "./img/hase.jpg", title: "Rabbit" },
+    { src: "./img/merkats.jpg", title: "Merkats" },
+    { src: "./img/mole.jpg", title: "Mole" },
+    { src: "./img/rhino.jpg", title: "Rhino" },
+    { src: "./img/hawk.jpg", title: "Hawk" },
+    { src: "./img/grizzli.jpg", title: "Two bears" },
+    { src: "./img/horses.jpg", title: "Two horses" }
 ];
 
-let imageTitles = [
-    "Two wolves",
-    "Baby sheep",
-    "Baby duck",
-    "Owl",
-    "Two dogs",
-    "Rabbit",
-    "Merkats",
-    "Mowl",
-    "Rhino",
-    "Hawk",
-    "Two bears",
-    "Two horses"
-];
+// let imageTitles = [
+//     "Two wolves",
+//     "Baby sheep",
+//     "Baby duck",
+//     "Owl",
+//     "Two dogs",
+//     "Rabbit",
+//     "Merkats",
+//     "Mowl",
+//     "Rhino",
+//     "Hawk",
+//     "Two bears",
+//     "Two horses"
+// ];
 
-let currentIndex = 0;
+let Index = 0;
+const dialog = document.getElementById('imageModal');
+const dialogImage = document.getElementById("dialogImage");
+const dialogTitle = document.getElementById("dialog-headline");
+const dialogCounter = document.getElementById("img-counter");
 
-function openDialog(index) {
-    currentIndex = index; // Setze den Index auf das geklickte Bild
-    const dialog = document.getElementById('myDialog');
-    updateDialogContent(); // Funktion zum Befüllen des Inhalts
+function openDialog(i) {
+    clearDialog();
+    Index = i; // weil dein erstes Bild 1 ist
+    updateDialog();
     dialog.showModal();
 }
 
-function nextPic() {
-    // Wenn wir am Ende sind, fangen wir wieder bei 0 an
-    currentIndex = (currentIndex + 1) % images.length;
-    updateDialogContent();
+// 4. Schließen
+function closeDialog() {
+    dialog.close();
 }
+
+function clearDialog() {
+    dialogImage.src = "";
+    dialogTitle.textContent = "";
+    dialogCounter.textContent = "";
+}
+
+// 3. Zentrale Update-Logik (trennt Logik von Anzeige)
+function updateDialog() {
+    dialogImage.src = images[Index].src;
+    dialogTitle.textContent = images[Index].title;
+    dialogCounter.textContent = `${Index + 1}/${images.length}`;
+}
+
+function nextPic() {
+    Index++;
+    if (Index >= images.length) {
+        Index = 0; // wieder zum Anfang
+    }
+
+    updateDialog();
+}
+
 
 function prevPic() {
-    // Geht einen Schritt zurück
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    updateDialogContent();
+    Index--;
+    if (Index < 0) {
+        Index = images.length - 1; // zum letzten Bild
+    }
+    updateDialog();
 }
 
-function updateDialogContent() {
-    const imgElement = document.getElementById('dialog-main-content');
-    const counterElement = document.getElementById('img-counter'); // ID angepasst auf dein HTML
-    const headline = document.querySelector('.dialogContent h2'); // Findet dein h2 Element
-    
-    imgElement.src = images[currentIndex];
-    headline.innerText = imageTitles[currentIndex]; // Setzt den Titel
-    counterElement.innerText = `${currentIndex + 1} / ${images.length}`; // Ändert den Text
+function outsideClick(event) {
+    if (event.target.id === "imageModal") {
+        dialog.close();
+    }
+}
+function outsideClick() {
+    dialog.close();
 }
 
-function closeDialog() {
-    document.getElementById('myDialog').close();
+document.onkeydown = function (event) {
+    if (!dialog.open) return;
+
+    if (event.key === "ArrowRight") {
+        nextPic(); // Name korrigiert
+    } else if (event.key === "ArrowLeft") {
+        prevPic(); // Name korrigiert
+    } else if (event.key === "Escape"){
+        closeDialog();
+    }
 }
+
