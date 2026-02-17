@@ -13,8 +13,6 @@
 h1 {
     color: white;
     font-size: 56px;
-    padding-bottom: 80px;
-    /* Etwas reduziert für bessere Optik */
     text-align: center;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -50,7 +48,6 @@ button{
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
-    /* Sicherheitsabstand für kleine Screens */
 }
 
 .wrapper-wide {
@@ -81,24 +78,19 @@ button{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    width: 100%;
 }
-
-
 
 .page-content {
     display: flex;
     flex-direction: column;
     flex: 1;
-    /* Zentriert H1 und Album horizontal */
     justify-content: center;
-    /* Zentriert den gesamten Block vertikal */
+    align-items: center;
     background-color: #06171E;
 }
 
 .content-btn {
-    width: clamp(150px, 25vw, 240px);
-    /* Button füllt genau eine Grid-Zelle */
+    width: clamp(150px, 25vw, 180px);
     border: none;
     padding: 0;
     border-radius: 16px;
@@ -139,57 +131,43 @@ button{
 .popUpField {
     background-color: #09212A;
     color: white;
+    border-radius: 40px;
     margin: auto;
-    padding-left: 64px;
-    padding-right: 64px;
-    padding-top: 56px;
-    padding-bottom: 56px;
+    padding: 56px 64px;
+    /*
     width: 700px;
     height: 700px;
-    /* Oder ein fester Wert wie 600px */
     max-width: 800px;
-    /* Damit er auf großen Bildschirmen nicht zu riesig wird */
-    border-radius: 40px;
     overflow: hidden;
     border: 2px solid white;
-    box-sizing: border-box;
-    flex: 1;
+    box-sizing: border-box; */
+    
 }
 
 .popUpField header {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 32px;
     width: 100%;
+    max-width: 560px;
     box-sizing: border-box;
-    /* Wichtig, damit Padding die Breite nicht sprengt */
 }
 
 .dialog-picture {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 16px;
-    /* Das hier ist entscheidend: */
     object-fit: cover;
-    /* Schneidet das Bild leicht an, damit es den Platz füllt */
-    /* ODER */
-    /* object-fit: contain; */
-    /* Zeigt das ganze Bild mit Rändern, falls das Format nicht passt */
-
-    aspect-ratio: 16 / 9;
-    /* Erzwingt ein einheitliches Format (z.B. 16:9 oder 1:1) */
 }
 
 .dialog-image-container {
-    width: 100%;
+    width: 560px;
     height: 440px;
-    /* Oder ein anderer fester Wert, der in deine 700px Box passt */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 20px;
-}
+    margin: 32px 0;
+}   
 
 .close-icon {
     background: none;
@@ -223,8 +201,21 @@ button{
 
 }
 
-@media (max-width: 730px){
+@media (max-width: 768px){
     h1{
         font-size: 48px;
+    }
+
+    .album{
+        padding-top: 16px;
+    }
+
+    .popUpField{
+        padding: 32px 16px;
+    }
+
+    .dialog-image-container{
+        width: 343px;
+        height: 375px;
     }
 }
