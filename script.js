@@ -14,21 +14,6 @@ let images = [
     { src: "./img/horses.jpg", title: "Two horses" }
 ];
 
-// let imageTitles = [
-//     "Two wolves",
-//     "Baby sheep",
-//     "Baby duck",
-//     "Owl",
-//     "Two dogs",
-//     "Rabbit",
-//     "Merkats",
-//     "Mowl",
-//     "Rhino",
-//     "Hawk",
-//     "Two bears",
-//     "Two horses"
-// ];
-
 let Index = 0;
 const dialog = document.getElementById('imageModal');
 const dialogImage = document.getElementById("dialogImage");
@@ -53,7 +38,6 @@ function clearDialog() {
     dialogCounter.textContent = "";
 }
 
-// 3. Zentrale Update-Logik (trennt Logik von Anzeige)
 function updateDialog() {
     dialogImage.src = images[Index].src;
     dialogTitle.textContent = images[Index].title;

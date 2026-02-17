@@ -77,15 +77,14 @@ button{
 }
 
 .album {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 40px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    width: 100%;
 }
 
-.content-btn:nth-child(8) {
-    grid-column: 2; /* Verschiebt das 8. Bild in die 2. Spalte */
-}
+
 
 .page-content {
     display: flex;
@@ -98,7 +97,7 @@ button{
 }
 
 .content-btn {
-    width: 100%;
+    width: clamp(150px, 25vw, 240px);
     /* Button füllt genau eine Grid-Zelle */
     border: none;
     padding: 0;
@@ -106,16 +105,14 @@ button{
     overflow: hidden;
     cursor: pointer;
     background: none;
-    /* Entfernt Standard-Button-Grau */
+    aspect-ratio: 1/1;
+    display: inline-block;
 }
-
-
 
 .content-btn img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    aspect-ratio: 1 / 1;
+    height: 100%;
+    display: block;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -219,29 +216,15 @@ button{
 }
 
 @media (max-width: 1400px) {
-    .album {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-       
-        justify-content: center;
-    }
-
-    .album img {
-        max-width: 200px;
-        max-height: 200px;
-        min-width: 150px;
-        min-height: 150px;
-    }
 
 }
 
 @media (max-width: 1200px){
-    .album {
-        grid-template-columns: repeat(4, 1fr);
-         gap: 0;
-    }
-    
-    .content-btn:nth-child(8) {
-        grid-column: auto; /* Hebt die Verschiebung von oben auf! */
+
+}
+
+@media (max-width: 730px){
+    h1{
+        font-size: 48px;
     }
 }
