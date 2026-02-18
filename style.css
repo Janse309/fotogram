@@ -137,6 +137,7 @@ button {
     margin: auto;
     padding: 56px 64px;
     overflow: hidden;
+    
     /*
     width: 700px;
     height: 700px;
@@ -180,6 +181,7 @@ button {
     cursor: pointer;
     display: flex;
     align-items: center;
+    outline: none;
 }
 
 .dialog-footer-navigation {

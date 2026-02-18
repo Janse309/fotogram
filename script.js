@@ -70,7 +70,7 @@ function outsideClick() {
 
 document.onkeydown = function (event) {
     if (!dialog.open) return;
-
+    
     if (event.key === "ArrowRight") {
         nextPic(); // Name korrigiert
     } else if (event.key === "ArrowLeft") {
