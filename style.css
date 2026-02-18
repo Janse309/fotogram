@@ -193,14 +193,6 @@ button{
     padding-top: 8px;
 }
 
-@media (max-width: 1400px) {
-
-}
-
-@media (max-width: 1200px){
-
-}
-
 @media (max-width: 768px){
     h1{
         font-size: 48px;
@@ -218,9 +210,10 @@ button{
         width: 343px;
         height: 375px;
     }
+}
 
-    
-
-
-    
+@media (max-width: 500px){
+    .header-content{
+        justify-content: center;
+    }
 }
