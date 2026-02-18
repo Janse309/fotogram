@@ -1,4 +1,3 @@
-
 let images = [
     { src: "./img/wolves.jpg", title: 'Two wolves' },
     { src: "./img/lamm.jpg", title: "Baby sheep" },
@@ -22,12 +21,11 @@ const dialogCounter = document.getElementById("img-counter");
 
 function openDialog(i) {
     clearDialog();
-    Index = i; // weil dein erstes Bild 1 ist
+    Index = i; 
     updateDialog();
     dialog.showModal();
 }
 
-// 4. Schließen
 function closeDialog() {
     dialog.close();
 }
@@ -47,17 +45,15 @@ function updateDialog() {
 function nextPic() {
     Index++;
     if (Index >= images.length) {
-        Index = 0; // wieder zum Anfang
+        Index = 0; 
     }
-
     updateDialog();
 }
-
 
 function prevPic() {
     Index--;
     if (Index < 0) {
-        Index = images.length - 1; // zum letzten Bild
+        Index = images.length - 1;
     }
     updateDialog();
 }
@@ -67,6 +63,7 @@ function outsideClick(event) {
         dialog.close();
     }
 }
+
 function outsideClick() {
     dialog.close();
 }
@@ -78,7 +75,7 @@ document.onkeydown = function (event) {
         nextPic(); // Name korrigiert
     } else if (event.key === "ArrowLeft") {
         prevPic(); // Name korrigiert
-    } else if (event.key === "Escape"){
+    } else if (event.key === "Escape") {
         closeDialog();
     }
 }
