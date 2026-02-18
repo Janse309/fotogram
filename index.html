@@ -43,9 +43,9 @@
             </div>
 
 
-            <dialog id="imageModal" class="popUpField" aria-labelledby="dialog-headline" aria-modal="true">
+            <dialog onclick="outsideClick(event)" id="imageModal" class="popUpField" aria-labelledby="dialog-headline" aria-modal="true">
 
-                <div class="dialogContent">
+                <div class="dialogContent" onclick="event.stopPropagation()">
 
                 <header>
                     <h2 id="dialog-headline">Mein Text</h2>

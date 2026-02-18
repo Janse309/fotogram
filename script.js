@@ -14,7 +14,7 @@ let images = [
 ];
 
 let Index = 0;
-const dialog = document.getElementById('imageModal');
+const dialog = document.getElementById("imageModal");
 const dialogImage = document.getElementById("dialogImage");
 const dialogTitle = document.getElementById("dialog-headline");
 const dialogCounter = document.getElementById("img-counter");
