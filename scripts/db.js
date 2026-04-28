@@ -41,7 +41,7 @@ let images = [
     },
     {
         "name": "Two bears",
-        "img": "<img src='./img/grizzli.jpg alt='grizzlies'>"
+        "img": "<img src='./img/grizzli.jpg' alt='grizzlies'>"
     },
     {
         "name": "Two horses",

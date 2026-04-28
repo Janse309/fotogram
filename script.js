@@ -1,23 +1,27 @@
-let images = [
-    { src: "./img/wolves.jpg", title: 'Two wolves' },
-    { src: "./img/lamm.jpg", title: "Baby sheep" },
-    { src: "./img/ducks.jpg", title: "Baby duck" },
-    { src: "./img/habichtskauz.jpg", title: "Owl" },
-    { src: "./img/puppys.jpg", title: "Two dogs" },
-    { src: "./img/hase.jpg", title: "Rabbit" },
-    { src: "./img/merkats.jpg", title: "Merkats" },
-    { src: "./img/mole.jpg", title: "Mole" },
-    { src: "./img/rhino.jpg", title: "Rhino" },
-    { src: "./img/hawk.jpg", title: "Hawk" },
-    { src: "./img/grizzli.jpg", title: "Two bears" },
-    { src: "./img/horses.jpg", title: "Two horses" }
-];
+// let images = [
+//     { src: "./img/wolves.jpg", title: 'Two wolves' },
+//     { src: "./img/lamm.jpg", title: "Baby sheep" },
+//     { src: "./img/ducks.jpg", title: "Baby duck" },
+//     { src: "./img/habichtskauz.jpg", title: "Owl" },
+//     { src: "./img/puppys.jpg", title: "Two dogs" },
+//     { src: "./img/hase.jpg", title: "Rabbit" },
+//     { src: "./img/merkats.jpg", title: "Merkats" },
+//     { src: "./img/mole.jpg", title: "Mole" },
+//     { src: "./img/rhino.jpg", title: "Rhino" },
+//     { src: "./img/hawk.jpg", title: "Hawk" },
+//     { src: "./img/grizzli.jpg", title: "Two bears" },
+//     { src: "./img/horses.jpg", title: "Two horses" }
+// ];
 
 let index = 0;
 const dialog = document.getElementById("imageModal");
 const dialogImage = document.getElementById("dialogImage");
 const dialogTitle = document.getElementById("dialog-headline");
 const dialogCounter = document.getElementById("img-counter");
+
+function init() {
+    renderImages();
+}
 
 function openDialog(i) {
     clearDialog();
@@ -37,9 +41,18 @@ function clearDialog() {
 }
 
 function updateDialog() {
-    dialogImage.src = images[index].src;
-    dialogTitle.textContent = images[index].title;
+    dialogImage.img = image.img;
+    dialogTitle.textContent = images.name;
     dialogCounter.textContent = `${index + 1}/${images.length}`;
+}
+
+function renderImages() {
+    let contentRef = document.getElementById('imageContent');
+    contentRef.innerHTML = "";
+
+    for (let index = 0; index < images.length; index++) {
+        contentRef.innerHTML += getImageTemplate(index);
+    }
 }
 
 function nextPic() {
@@ -57,6 +70,8 @@ function prevPic() {
     }
     updateDialog();
 }
+
+
 
 function outsideClick(event) {
     if (event.target.id === "imageModal") {

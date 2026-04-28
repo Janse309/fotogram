@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./img/fav-icon.png">
     <link rel="preload" href="./assets/figtree-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="./scripts/db.js" defer></script>
+    <script src="./scripts/template.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="./scripts/template.js"></script>
+    
 </head>
 
-<body>
+<body onload="init()">
 
 <header class="page-header">
     <div class="header-content wrapper-wide"> 
@@ -22,14 +24,14 @@
     </div>
 </header>
 
-    <main id="imageContent">
+    <main>
 
         <section class="wrapper page-content">
 
             <h1>Your personal photo album</h1>
 
             <div id="imageContent" class="album" role="list">
-                <button role="listitem" onclick="openDialog(0)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 1 von 12: Wölfe vergrößern"><img src="./img/wolves.jpg" alt="wolf image"></button>
+                <!-- <button role="listitem" onclick="openDialog(0)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 1 von 12: Wölfe vergrößern"><img src="./img/wolves.jpg" alt="wolf image"></button>
                 <button role="listitem" onclick="openDialog(1)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 2 von 12: Schafe vergrößern"><img src="./img/lamm.jpg" alt="sheep puppy image"></button>
                 <button role="listitem" onclick="openDialog(2)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 3 von 12: Enten vergrößern"><img src="./img/ducks.jpg" alt="ducks image"></button>
                 <button role="listitem" onclick="openDialog(3)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 4 von 12: Habichtskauz vergrößern"><img src="./img/habichtskauz.jpg" alt="habichtskauz image"></button>
@@ -40,7 +42,7 @@
                 <button role="listitem" onclick="openDialog(8)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 9 von 12: Nashorn vergrößern"><img src="./img/rhino.jpg" alt="rhino"></button>
                 <button role="listitem" onclick="openDialog(9)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 10 von 12: Falke vergrößern"><img src="./img/hawk.jpg" alt="hawk image"></button>
                 <button role="listitem" onclick="openDialog(10)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 11 von 12: Bär vergrößern"><img src="./img/grizzli.jpg" alt="grizzlies image"></button>
-                <button role="listitem" onclick="openDialog(11)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 12 von 12: Pferde vergrößern"><img src="./img/horses.jpg" alt="horses image"></button>
+                <button role="listitem" onclick="openDialog(11)" class="content-btn" aria-haspopup="dialog" aria-label="Bild 12 von 12: Pferde vergrößern"><img src="./img/horses.jpg" alt="horses image"></button> -->
             </div>
 
 
