@@ -1,50 +1,51 @@
 let images = [
     {
         "name": "Two wolves",
-        "img": "<img src='./img/wolves.jpg' alt='wolfs'>"
+        "img": "./img/wolves.jpg"
+        // Dateipfad so angeben das nur der Dateipfad dort steht ohne
     },
     {
         "name": "Baby sheep",
-        "img": "<img src='./img/lamm.jpg' alt='Baby sheep'>"
+        "img": "./img/lamm.jpg"
     },
     {
         "name": "Baby duck",
-        "img": "<img src='./img/ducks.jpg' alt='Baby ducks'>"
+        "img": "./img/ducks.jpg"
     },
     {
         "name": "Owl",
-        "img": "<img src='./img/habichtskauz.jpg' alt='habichtskauz'>"
+        "img": "./img/habichtskauz.jpg"
     },
     {
         "name": "Two dogs",
-        "img": "<img src='./img/puppys.jpg' alt='dogs'>"
+        "img": "./img/puppys.jpg"
     },
     {
         "name": "Rabbit",
-        "img": "<img src='./img/hase.jpg' alt='rabbit'>"
+        "img": "./img/hase.jpg"
     },
     {
         "name": "Merkats",
-        "img": "<img src='./img/merkats.jpg' alt='meerkats'>"
+        "img": "./img/merkats.jpg"
     },
     {
         "name": "Mole",
-        "img": "<img src='./img/mole.jpg' alt='mole'>"
+        "img": "./img/mole.jpg"
     },
     {
         "name": "Rhino",
-        "img": "<img src='./img/rhino.jpg' alt='rhino'>"
+        "img": "./img/rhino.jpg"
     },
     {
         "name": "Hawk",
-        "img": "<img src='./img/hawk.jpg' alt='hawk'>"
+        "img": "./img/hawk.jpg"
     },
     {
         "name": "Two bears",
-        "img": "<img src='./img/grizzli.jpg' alt='grizzlies'>"
+        "img": "./img/grizzli.jpg"
     },
     {
         "name": "Two horses",
-        "img": "<img src='./img/horses.jpg' alt='horses'>"
+        "img": "./img/horses.jpg"
     }
 ]
