@@ -28,7 +28,7 @@ function clearDialog() {
 function updateDialog() {
     dialogImage.src = images[index].img;
     dialogTitle.textContent = images[index].name;
-    dialogCounter.textContent = `${index + 1}/${images.length}`;
+    dialogCounter.textContent = `${index + 1} / ${images.length}`;
 }
 
 function nextPic() {
