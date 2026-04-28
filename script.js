@@ -13,7 +13,7 @@ let images = [
     { src: "./img/horses.jpg", title: "Two horses" }
 ];
 
-let Index = 0;
+let index = 0;
 const dialog = document.getElementById("imageModal");
 const dialogImage = document.getElementById("dialogImage");
 const dialogTitle = document.getElementById("dialog-headline");
@@ -21,7 +21,7 @@ const dialogCounter = document.getElementById("img-counter");
 
 function openDialog(i) {
     clearDialog();
-    Index = i; 
+    index = i; 
     updateDialog();
     dialog.showModal();
 }
@@ -37,23 +37,23 @@ function clearDialog() {
 }
 
 function updateDialog() {
-    dialogImage.src = images[Index].src;
-    dialogTitle.textContent = images[Index].title;
-    dialogCounter.textContent = `${Index + 1}/${images.length}`;
+    dialogImage.src = images[index].src;
+    dialogTitle.textContent = images[index].title;
+    dialogCounter.textContent = `${index + 1}/${images.length}`;
 }
 
 function nextPic() {
-    Index++;
-    if (Index >= images.length) {
-        Index = 0; 
+    index++;
+    if (index >= images.length) {
+        index = 0; 
     }
     updateDialog();
 }
 
 function prevPic() {
-    Index--;
-    if (Index < 0) {
-        Index = images.length - 1;
+    index--;
+    if (index < 0) {
+        index = images.length - 1;
     }
     updateDialog();
 }
